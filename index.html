@@ -149,20 +149,26 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <form>
+            <!-- warning -->
+            <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+              <strong>congratulation!</strong> Input sudah diterima.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <!-- warning end -->
+            <form name="data-contact">
               <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="nama" aria-describedby="nama" />
+                <input type="text" class="form-control" id="nama" aria-describedby="nama" name="nama" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
             </form>
           </div>
         </div>
@@ -184,5 +190,27 @@
     <!-- Footer end -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycby53d_bL-60C7UvZPbZ4V2wR_ZrkpmKHMloduOVHiZ6yXrv0sW-YL0KDtM88JePET2VZw/exec';
+      const form = document.forms['data-contact'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const myAlert = document.querySelector('.alert');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        //ketika tombol submit di klik
+        myAlert.classList.toggle('d-none');
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            myAlert.classList.toggle('d-none');
+            form.reset();
+            console.log('Success!', response);
+          
+          })
+
+          .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
   </body>
 </html>
