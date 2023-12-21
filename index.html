@@ -41,7 +41,7 @@
     <section class="jumbotron text-center">
       <img src="img/eve-online-game-spaceship-profile picture reduce.jpg" alt="profile picture" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Lukas Adi Prasetyo</h1>
-      <p class="lead">Mahasiswa | Editor video</p>
+      <p class="lead">Mahasiswa | Web Developer</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -89,41 +89,31 @@
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/Project/True Armarrian.jpg" class="card-img-top" alt="Project 1" />
+              <img src="img/Project/picture 1.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
+                <p>project 1</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">more...</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/Project/Minmatar.jpg" class="card-img-top" alt="Project 2" />
+              <img src="img/Project/picture 2.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
+                <p>project 2</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">more...</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/Project/caldari.jpg" class="card-img-top" alt="Project 3" />
+              <img src="img/Project/mario vs big bomb.png" class="card-img-top" alt="Project 3" />
               <div class="card-body">
+                <p>Mario vs Big Villain</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/Project/caldari.jpg" class="card-img-top" alt="Project 4" />
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/Project/caldari.jpg" class="card-img-top" alt="Project 5" />
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://github.com/Gilga1412/CompGrap_Lec_Kel_4.git" class="card-link">more...</a>
               </div>
             </div>
           </div>
@@ -138,23 +128,32 @@
       </svg>
     </section>
     <!-- Project end -->
+    <!-- test -->
+
+    <!-- test end -->
 
     <!-- Contact -->
     <section id="contact">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>My Contact</h2>
+            <h2>Contact Me</h2>
           </div>
         </div>
+        <!-- warning -->
+        <!-- menghilangkan notif ()d-none) -->
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <!-- warning -->
             <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
               <strong>congratulation!</strong> Input sudah diterima.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <!-- warning end -->
+          </div>
+        </div>
+        <!-- warning end -->
+
+        <div class="row">
+          <div class="col">
             <form name="data-contact">
               <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap</label>
@@ -171,6 +170,24 @@
               <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
             </form>
           </div>
+          <div class="col">
+            <div class="p-3 border bg-primary text-white">
+              <h3>My Contact</h3>
+              
+              <p>
+                <h6>address:</h6>
+                Jl. H. Salihun No.33, RT.6/RW.3, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530
+              </p>
+              <p>
+                <h6>Phone:</h6>
+                081617710735
+              </p>
+              <p>
+                <h6>Email:</h6>
+                lukas.prasetyo@binus.ac.id
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -185,7 +202,7 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-1">
-      <p>Created by love and hardwork by <a href="link" class="text-white fw-bold"></a></p>
+      <p>Created by love and hardwork by <a href="https://youtube.com/@Escanor1412?si=fTEvE_KMfOLvjmF8" class="text-white fw-bold">Lukas Adi Prasetyo</a></p>
     </footer>
     <!-- Footer end -->
 
@@ -206,7 +223,6 @@
             myAlert.classList.toggle('d-none');
             form.reset();
             console.log('Success!', response);
-          
           })
 
           .catch((error) => console.error('Error!', error.message));
